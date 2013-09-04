@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .starter-template {
@@ -26,6 +27,8 @@ hr {
 }
 
 .footer {
+  padding-bottom: 20px;
+  text-align: center;
   a {
     text-decoration: underline;
   }

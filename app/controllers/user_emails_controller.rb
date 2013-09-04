@@ -6,7 +6,7 @@ class UserEmailsController < ApplicationController
   def create
     @email = UserEmail.create params_email
     if @email.save
-      redirect_to :back, notice: 'Thank you for submitting your email. We will keep you posted.'
+      redirect_to root_url, notice: 'Thank you for submitting your email. We will keep you posted.'
     else
       render 'new'
     end
