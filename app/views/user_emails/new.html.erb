@@ -5,25 +5,26 @@
   <div class="starter-template">
     <% if flash[:notice] %>
       <br><br>
+
       <p class="lead">
         Thank you for submitting your email. We will keep you posted.
       </p>
     <% else %>
-      <p class="lead">Sunt barcases transferre fidelis, lotus nomenes.
+      <p>Sunt barcases transferre fidelis, lotus nomenes.
         Cum ausus persuadere, omnes brodiumes perdere pius, velox indictioes.
         Gratis, nobilis galataes cito desiderium de altus, castus competition.Bi-color musa satis acquireres genetrix
         est.
         Peritus, emeritis zetas velox amor de talis, grandis lactea.
         Cum fluctui persuadere, omnes vigiles imperium mirabilis, albus tumultumquees.</p>
 
-      <%= form_for @email do |f| %>
-        <p><%= f.email_field :email_address, placeholder: "Enter your email address here...", size: 30 %></p>
+      <%= form_for @email, html: {role: :form} do |f| %>
+        <p><%= f.email_field :email_address, placeholder: "Enter your email address here...", class: 'form-control' %></p>
 
-        <p><%= submit_tag 'Submit' %></p>
+        <p><%= button_tag 'Submit', class: "btn btn-primary" %></p>
       <% end %>
-      </div>
 
     <% end %>
+  </div>
 
 
-    </div>
+</div>
