@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EmailCollector</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <title><%= content_for?(:title) ? yield(:title) : 'Website Name' %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../../assets/js/html5shiv.js"></script>
+  <script src="../../assets/js/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-
+<!--Navbar-->
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand " href="/"><%= image_tag('logo.png', class: 'img-responsive') %></a>
+      <a class="navbar-brand" href="/"><%= content_for?(:title) ? yield(:title) : 'Website Name' %></a>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</div>
+<!--Navbar end-->
 <%= yield %>
-
+<!--Footer-->
+<hr>
+<div class="container footer">
+  <div class="row">
+    <div class="col-md-2 col-md-offset-3 "> <%= link_to 'About Us', '/' %></div>
+    <div class="col-md-2"> <%= link_to 'Terms & Conditions', '/' %></div>
+    <div class="col-md-2"> <%= link_to 'Contact Us', '/' %></div>
+  </div>
+</div>
+<!--Footer end-->
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </body>
 </html>

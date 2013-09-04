@@ -1,0 +1,32 @@
+// Place all the styles related to the user_email controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding-top: 70px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+  p {
+    padding: 15px 15px;
+    font-size: 200%;
+  }
+}
+
+.navbar .navbar-brand {
+  font-size: 24px;
+  line-height: 46px;
+  color: black;
+}
+
+hr {
+  border-width: 10px;
+  border-color: #7D7D7D;
+}
+
+.footer {
+  a {
+    text-decoration: underline;
+  }
+}
